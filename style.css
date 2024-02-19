@@ -1,0 +1,119 @@
+body {
+  background-color: #cfb991;
+  color: #000000;
+}
+
+#navbar {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100vh;
+  border: 1px;
+  padding: 1px;
+  background-color: #000000;
+  color: #CFB991;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: transform 0.1s ease;
+}
+
+#navbar:target {
+  transform: translateY(0);
+}
+
+#navbar>ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#navbar>ul a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: larger;
+  padding: 2px;
+  margin: 2px;
+  color: #ddb945;
+  display: block;
+}
+
+#navbar>ul a:link {
+  background-color: black;
+}
+
+#navbar>ul a:visited {
+  color: #8e6f3e;
+}
+
+#navbar>ul a:focus {
+  color: #daaa00;
+  background-color: lightgoldenrodyellow;
+}
+
+#navbar>ul a:hover {
+  color: #ddb945;
+  background-color: lightgoldenrodyellow;
+}
+
+#navbar>ul a:active {
+  color: #daaa00;
+  background-color: lightgoldenrodyellow;
+}
+
+a.twitter {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #ebd99f;
+  display: none;
+}
+
+a.hamburger {
+  color: #000000;
+}
+
+a.close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #ebd99f;
+  display: none;
+}
+
+#navbar:target a.close {
+  display: block;
+}
+
+.content h3 {
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #000000;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  #navbar {
+    position: static;
+    height: 50px;
+    transform: translateY(0);
+    width: 100%;
+  }
+
+  .hamburger,
+  .close {
+    display: none;
+  }
+
+  a.twitter {
+    display: block;
+  }
+
+  #navbar>ul li {
+    display: inline-block;
+    margin-right: 100px;
+  }
+}
